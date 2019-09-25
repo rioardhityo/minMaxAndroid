@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".Controller.MinMaxCalculation">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnChooseProduct"
+            android:background="#fff"
+            android:text="CHOOSE PRODUCT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <TextView android:fontFamily="sans-serif-medium"
+        android:text="Safety Stock"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView android:fontFamily="sans-serif-medium"
+        android:text="PEMAKAIAN MAKSIMUM"
+        android:textColor="#fff"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:background="@color/White"
+        android:layout_marginRight="10dp"
+        android:id="@+id/safetyE1"
+        android:layout_marginLeft="10dp"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <TextView android:fontFamily="sans-serif-medium"
+        android:text="PERIODE RATA2 PENGGUNAAN BARANG"
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:background="@color/White"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/safetyE2"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <TextView android:fontFamily="sans-serif-medium"
+        android:text="LEAD TIME"
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:background="@color/White"
+        android:layout_marginRight="10dp"
+        android:id="@+id/safetyE3"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:layout_height="40dp"/>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:text="HITUNG SAFETY STOCK"
+        android:layout_width="wrap_content"
+        android:background="#fff"
+        android:id="@+id/safetyBtn"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:layout_width="wrap_content"
+            android:text="SAFETY STOCK"
+            android:layout_weight="1"
+            android:id="@+id/txtSafe"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+        <View
+            android:background="@color/White"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:text="Minimum Stock"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:text="PERIODE RATA2 PENGGUNAAN BARANG"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:background="@color/White"
+            android:layout_marginRight="10dp"
+            android:id="@+id/minE1"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:text="LEAD TIME"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:background="@color/White"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/minE2"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:text="SAFETY STOCK"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:background="@color/White"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/minE3"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+            android:text="HITUNG MINIMUM STOCK"
+            android:layout_width="wrap_content"
+            android:background="#fff"
+            android:id="@+id/minBtn1"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:layout_width="wrap_content"
+            android:text="MINIMUM STOCK"
+            android:layout_weight="1"
+            android:id="@+id/txtMin"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_height="match_parent"/>
+        </LinearLayout>
+        <View
+            android:background="@color/White"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:text="Maximum Stock"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:text="PERIODE RATA2 PENGGUNAAN BARANG"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:background="@color/White"
+            android:layout_marginRight="10dp"
+            android:id="@+id/maxE1"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="40dp"/>
+
+        <TextView android:fontFamily="sans-serif-medium"
+            android:text="LEAD TIME"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:background="@color/White"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:id="@+id/maxE2"
+            android:inputType="number"
+            android:layout_height="40dp"/>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+            android:text="HITUNG MAXIMUM STOCK"
+            android:layout_width="wrap_content"
+            android:background="#fff"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/maxBtn1"
+            android:layout_height="wrap_content"/>
+
+            <TextView android:fontFamily="sans-serif-medium"
+                android:layout_width="wrap_content"
+                android:text="MAXIMUM STOCK"
+                android:layout_weight="1"
+                android:id="@+id/txtMax"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/White"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+</ScrollView>

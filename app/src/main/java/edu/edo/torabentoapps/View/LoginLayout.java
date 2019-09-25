@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.edo.torabentoapps.BR;
+import edu.edo.torabentoapps.Controller.MinMaxCalculation;
 import edu.edo.torabentoapps.Model.Makanan.ModelStokMakanan;
 import edu.edo.torabentoapps.Model.Reseller.DataArray;
 import edu.edo.torabentoapps.Model.Reseller.ModelLogin;
@@ -51,7 +52,7 @@ import retrofit2.Response;
 
 public class LoginLayout extends AppCompatActivity {
 
-    BootstrapButton buttonTambah,buttonLogout;
+    BootstrapButton buttonTambah,buttonLogout,btnMinMax;
     RecyclerView mRecyler;
     RecyclerView.LayoutManager mLayout;
     RecyclerView.Adapter mAdapter;
@@ -95,6 +96,14 @@ public class LoginLayout extends AppCompatActivity {
         buttonLogout = (BootstrapButton)findViewById(R.id.tombollogout);
         doLogout();
 
+        btnMinMax = (BootstrapButton)findViewById(R.id.minmaxstock);
+        btnMinMax.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i  = new Intent(LoginLayout.this, MinMaxCalculation.class);
+                startActivity(i);
+            }
+        });
 //        buttonTambah.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {

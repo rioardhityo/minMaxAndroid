@@ -22,7 +22,7 @@
                 android:id="@+id/toolbardaftar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/PinkTora"
+                android:background="@color/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </android.support.design.widget.AppBarLayout>
@@ -39,7 +39,7 @@
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/cariidtransaksi"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:hint="Masukkan ID Transaksi..."
             android:padding="16dp"
             android:layout_margin="5dp"
@@ -52,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:roundedCorners="true"
+            android:fontFamily="sans-serif-medium"
             app:bootstrapBrand="danger"
             android:text="CEK STATUS TRANSAKSI"
             app:bootstrapSize="lg"

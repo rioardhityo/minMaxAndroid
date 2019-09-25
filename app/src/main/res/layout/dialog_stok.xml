@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16sp"
-    android:layout_margin="16sp"
+    android:background="@color/colorPrimary"
     >
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -20,7 +21,8 @@
             android:layout_height="wrap_content"
             android:text="Ebi Furai"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -29,7 +31,8 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             android:gravity="end"
             />
 
@@ -39,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -47,7 +50,8 @@
             android:layout_height="wrap_content"
             android:text="Chicken Katsu"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -56,7 +60,8 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             android:gravity="end"
             />
 
@@ -65,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -73,7 +78,8 @@
             android:layout_height="wrap_content"
             android:text="Beef Teriyaki"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -82,7 +88,8 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             android:gravity="end"
             />
 
@@ -91,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -99,7 +106,8 @@
             android:layout_height="wrap_content"
             android:text="Ekado"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -108,7 +116,8 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             android:gravity="end"
             />
 
@@ -117,7 +126,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -125,7 +134,8 @@
             android:layout_height="wrap_content"
             android:text="Shrimp Roll"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -134,7 +144,8 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             android:gravity="end"
             />
 
@@ -143,7 +154,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -151,7 +162,8 @@
             android:layout_height="wrap_content"
             android:text="Chicken Spicy"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -160,7 +172,8 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             android:gravity="end"
             />
 
@@ -169,7 +182,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -177,7 +190,8 @@
             android:layout_height="wrap_content"
             android:text="Kani Roll"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -186,7 +200,8 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             android:gravity="end"
             />
 
@@ -195,7 +210,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="10sp"
         >
 
         <TextView
@@ -203,7 +218,8 @@
             android:layout_height="wrap_content"
             android:text="Egg Chicken Roll"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-medium"
             />
 
         <TextView
@@ -212,7 +228,7 @@
             android:layout_height="wrap_content"
             android:text="0 buah"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="#fff"
             android:gravity="end"
             />
 

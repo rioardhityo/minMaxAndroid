@@ -4,71 +4,99 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/gambarBeli"
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
-        android:scaleType="fitXY"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:textStyle="bold"
-        android:id="@+id/makananBeli"
-        android:text="Tes"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:layout_below="@+id/gambarBeli"/>
-    <TextView
-        android:id="@+id/labelharga"
-        android:text="Harga "
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/makananBeli"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp" />
-    <TextView
-        android:textSize="20sp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"
-        android:id="@+id/hargabeli"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/labelharga"
-        android:layout_below="@+id/makananBeli"/>
-    <TextView
-        android:id="@+id/labelstok"
-        android:layout_margin="6dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/labelharga"
-        android:text="Stok "
-        android:textSize="20sp"/>
-    <TextView
-        android:textSize="20sp"
-        android:layout_margin="6dp"
-        android:id="@+id/stokdialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/labelharga"
-        android:layout_below="@+id/labelharga"/>
-    <TextView
-        android:id="@+id/labelqty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="QTY"
-        android:gravity="center"
-        android:layout_below="@+id/labelstok"/>
-    <EditText
-        android:id="@+id/quantitydidialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/labelqty"
-        android:focusable="true"
-        android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/gambarBeli"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/makananBeli"
+            android:text="Tes"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_below="@+id/gambarBeli"/>
+        <TextView
+            android:id="@+id/labelharga"
+            android:text="Harga "
+            android:fontFamily="sans-serif-medium"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/makananBeli"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp" />
+        <TextView
+            android:textSize="20sp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:id="@+id/hargabeli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/labelharga"
+            android:layout_below="@+id/makananBeli"/>
+        <TextView
+            android:id="@+id/labelstok"
+            android:layout_margin="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelharga"
+            android:text="Stok "
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"/>
+        <TextView
+            android:textSize="20sp"
+            android:layout_margin="6dp"
+            android:id="@+id/stokdialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/labelharga"
+            android:layout_below="@+id/labelharga"/>
+        <TextView
+            android:id="@+id/labelqty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QTY"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_below="@+id/labelstok"/>
+        <EditText
+            android:id="@+id/quantitydidialog"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/labelqty"
+            android:focusable="true"
+            android:textSize="20sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
 
 </RelativeLayout>

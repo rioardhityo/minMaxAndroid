@@ -48,9 +48,9 @@ public class HalamanAwalLayout extends AppCompatActivity {
             setContentView(R.layout.activity_main);
 
             pd = new ProgressDialog(HalamanAwalLayout.this);
-            pd.setTitle("Pesan");
-            pd.setMessage("Sedang mengambil data...");
-            pd.setIcon(R.drawable.loading);
+            pd.setTitle("PESAN");
+            pd.setMessage("Sedang Mengambil Data...");
+            pd.setIcon(R.drawable.ic_error_outline_black_24dp);
 //            pd.setCancelable(false);
             pd.show();
 
@@ -68,7 +68,7 @@ public class HalamanAwalLayout extends AppCompatActivity {
                             //Toast.makeText(HalamanAwalLayout.this, "Tab satu", Toast.LENGTH_SHORT).show();
                             searchView.setEnabled(true);
                             fragment = new HomeFragment();
-                            setTitle("Tora Bento Apps");
+                            setTitle("");
 //                        if(!menua.hasVisibleItems()){
 //                            MenuItem item1 = menua.findItem(R.id.action_search);
 //                            item1.setVisible(true);
@@ -78,14 +78,14 @@ public class HalamanAwalLayout extends AppCompatActivity {
                             //Toast.makeText(HalamanAwalLayout.this, "Tab dua", Toast.LENGTH_SHORT).show();
                             searchView.setVisibility(View.GONE);
                             fragment = new ResellerFragment();
-                            setTitle("Login Reseller");
+                            setTitle("");
                             break;
                         case R.id.tab_keranjang:
                             //Toast.makeText(HalamanAwalLayout.this, "Tab tiga", Toast.LENGTH_SHORT).show();
                             //searchView.setEnabled(false);
                             searchView.setVisibility(View.GONE);
                             fragment = new KeranjangFragment();
-                            setTitle("Keranjang");
+                            setTitle("");
                             break;
                     }
                     getSupportFragmentManager()

@@ -18,7 +18,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/PinkTora"
+                android:background="@color/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
             <com.miguelcatalan.materialsearchview.MaterialSearchView
@@ -42,9 +42,12 @@
     <com.roughike.bottombar.BottomBar
         android:id="@+id/bottombar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
         app:bb_tabXmlResource="@xml/bottom_bar"
-        android:background="@color/PinkTora"
+        android:background="#fff"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
         app:bb_inActiveTabAlpha="1.9"
         android:layout_alignParentBottom="true" />
 

@@ -27,6 +27,7 @@
                         android:textAppearance="?textAppearanceLargePopupMenu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Atas nama : "
                         android:padding="16dp"
                         />
@@ -35,6 +36,7 @@
                         android:id="@+id/namapembeliht"
                         android:padding="16dp"
                         android:text="Faisal"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/Black"
                         android:textAppearance="?textAppearanceLargePopupMenu"
                         android:layout_width="wrap_content"
@@ -44,6 +46,8 @@
                         android:id="@+id/idtransaksi"
                         android:textAppearance="?textAppearanceLargePopupMenu"
                         android:layout_width="match_parent"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/colorPrimary"
                         android:layout_height="wrap_content"
                         android:text="ID : 19"
                         android:padding="16dp"
@@ -63,6 +67,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
+                        android:fontFamily="sans-serif-medium"
                         app:bootstrapBrand="info"
                         android:textColor="@color/Black"
                         android:layout_margin="15dp"
@@ -86,6 +91,7 @@
                         android:layout_height="wrap_content"
                         android:padding="16dp"
                         android:textColor="@color/Black"
+                        android:fontFamily="sans-serif-medium"
                         android:textSize="16sp"
                         android:text="Total harga : "
                         />
@@ -114,8 +120,9 @@
                         android:id="@+id/alamatpengiriman"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Alamat pengiriman : \nJln. manana jashdjahsdkajhsdjaskdjhakjsdhkajhsdkahsdkjahkjsdhakjsdhkajshdajkhd"
+                        android:text="Alamat pengiriman : \nJln. manana aja yang akan muncul disini"
                         android:padding="16dp"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/Black"
                         android:textSize="16dp"
                         />
@@ -134,7 +141,8 @@
                         android:layout_height="wrap_content"
                         android:text="Status Pemesanan : Pending"
                         android:padding="16dp"
-                        android:textColor="@color/Black"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="16dp"
                         />
 
@@ -152,6 +160,7 @@
                         android:layout_height="wrap_content"
                         android:text="2017-08-09"
                         android:padding="5dp"
+                        android:fontFamily="sans-serif-medium"
                         android:textStyle="italic"
                         android:gravity="end"
                         />

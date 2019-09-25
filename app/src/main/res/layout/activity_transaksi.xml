@@ -10,6 +10,8 @@
     <com.beardedhen.androidbootstrap.BootstrapButton
         android:id="@+id/checkoutbutton"
         android:layout_width="match_parent"
+        android:elevation="10dp"
+        android:fontFamily="sans-serif-medium"
         android:layout_height="wrap_content"
         app:roundedCorners="true"
         app:bootstrapBrand="danger"

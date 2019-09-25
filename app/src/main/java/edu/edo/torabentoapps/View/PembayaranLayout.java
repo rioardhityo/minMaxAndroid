@@ -244,7 +244,7 @@ public class PembayaranLayout extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ModelDetailPesanan> call, Throwable t) {
-                Toast.makeText(PembayaranLayout.this, "Angger weh on failure teh : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PembayaranLayout.this, "Something Wrong : "+t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -430,7 +430,7 @@ public class PembayaranLayout extends AppCompatActivity {
                             }
                         }
                     }else{
-                        Toast.makeText(PembayaranLayout.this, "Null wae sa teh", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PembayaranLayout.this, "Something Wrong", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(PembayaranLayout.this, "Error : "+response.errorBody() + "Pesan : "+response.message(), Toast.LENGTH_SHORT).show();

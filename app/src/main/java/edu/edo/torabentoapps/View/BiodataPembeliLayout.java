@@ -30,13 +30,13 @@ public class BiodataPembeliLayout extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.biodatapembeli);
-        setTitle("Mengisi Biodata Pembeli");
+        setTitle("Biodata Pembeli");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbardaftar);
         setSupportActionBar(toolbar);
-        toolbar.setSubtitle("Biodata pembeli untuk transaksi pembayaran.");
+        toolbar.setSubtitle("Pengisian Biodata Pembeli");
         //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle("Mengisi Biodata Pembeli");
+        setTitle("Biodata Pembeli");
         pd = new ProgressDialog(BiodataPembeliLayout.this);
         pd.setMessage("Silahkan tunggu...");
         bindButton();

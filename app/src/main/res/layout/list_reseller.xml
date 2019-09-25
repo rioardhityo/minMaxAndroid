@@ -21,7 +21,7 @@
                 android:id="@+id/toolbardaftar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/PinkTora"
+                android:background="@color/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </android.support.design.widget.AppBarLayout>
@@ -37,15 +37,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Lihat stok Reseller lain"
+            android:gravity="left"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="STOK RESELLER LAIN"
             android:textColor="@color/Black"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerviewuntukreseller"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="150dp">
 
         </android.support.v7.widget.RecyclerView>
 
@@ -54,13 +56,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:text="Perbaharui Jumlah Stok Makanan Anda"
+        android:textSize="15sp"
+        android:text="TAMBAH STOK"
+        android:fontFamily="sans-serif-medium"
         android:textColor="@color/Black"
-        android:gravity="center"
         />
 
-    <android.support.v4.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -164,6 +166,21 @@
             </LinearLayout>
 
             <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/minmaxstock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:roundedCorners="true"
+                app:bootstrapBrand="danger"
+                android:text="MANAGEMENT STOCK"
+                app:bootstrapSize="lg"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
                 android:id="@+id/tombollogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -178,6 +195,5 @@
 
         </LinearLayout>
 
-    </android.support.v4.widget.NestedScrollView>
-
+    </ScrollView>
 </LinearLayout>

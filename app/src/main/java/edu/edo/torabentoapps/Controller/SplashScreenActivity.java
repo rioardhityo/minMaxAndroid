@@ -18,7 +18,7 @@ public class SplashScreenActivity extends AwesomeSplash {
     @Override
     public void initSplash(ConfigSplash configSplash) {
         //Customize Circular Reveal
-        configSplash.setBackgroundColor(R.color.White); //any color you want form colors.xml
+        configSplash.setBackgroundColor(R.color.colorPrimary); //any color you want form colors.xml
         configSplash.setAnimCircularRevealDuration(1000); //int ms
         configSplash.setRevealFlagX(Flags.REVEAL_LEFT);  //or Flags.REVEAL_LEFT
         configSplash.setRevealFlagY(Flags.REVEAL_TOP); //or Flags.REVEAL_TOP
@@ -26,7 +26,7 @@ public class SplashScreenActivity extends AwesomeSplash {
         //Choose logo OR PATH; if you don't provide String value for path it's logo by default
 
         //Customize Logo
-        configSplash.setLogoSplash(R.drawable.tora); //or any other drawable
+        configSplash.setLogoSplash(R.drawable.ic_grocery); //or any other drawable
         configSplash.setAnimLogoSplashDuration(2000); //int ms
         configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn); //choose one form Techniques (ref: https://github.com/daimajia/AndroidViewAnimations)
 
@@ -43,8 +43,8 @@ public class SplashScreenActivity extends AwesomeSplash {
 
 
         //Customize Title
-        configSplash.setTitleSplash("Tora Bento Apps");
-        configSplash.setTitleTextColor(R.color.Black);
+        configSplash.setTitleSplash("FOODCOMMERCE");
+        configSplash.setTitleTextColor(R.color.White);
         configSplash.setTitleTextSize(30f); //float value
         configSplash.setAnimTitleDuration(2000);
         configSplash.setAnimTitleTechnique(Techniques.Flash);

@@ -27,7 +27,7 @@
                     android:id="@+id/toolbardaftar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:background="@color/PinkTora"
+                    android:background="@color/colorPrimary"
                     app:popupTheme="@style/AppTheme.PopupOverlay" />
 
             </android.support.design.widget.AppBarLayout>
@@ -52,8 +52,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pembayaran"
-                    android:textSize="20sp"
-                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="15sp"
+
                     android:textColor="@color/Black"
                     />
 
@@ -63,12 +64,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
                 >
 
                 <com.beardedhen.androidbootstrap.BootstrapLabel
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAlignment="center"
                     android:text="Tahap ini merupakan tahap pembayaran dimana pembeli melakukan transfer uang ke rekening tora-tora bento lalu melakukan upload gambar resi sebagai bukti pembayaran."
                     android:gravity="start"
                     />
@@ -85,9 +88,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Daftar makanan yang akan dibeli"
-                    android:textSize="20sp"
-                    android:gravity="center"
+                    android:text="Daftar Makanan"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="left"
                     android:textColor="@color/Black"
                     />
 
@@ -97,6 +101,7 @@
                 android:id="@+id/rvuntuklistyangdibeli"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 />
 
             <LinearLayout
@@ -110,8 +115,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Total bayar :"
-                    android:textSize="20sp"
-                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:fontFamily="sans-serif-medium"
                     android:textColor="@color/Black"
                     />
 
@@ -129,7 +135,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Rp. 100.005"
+                    android:layout_marginBottom="10dp"
                     android:textSize="40sp"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:textColor="@color/Red"
                     />
@@ -146,10 +154,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Transfer ke rekening berikut :"
+                    android:text="Transfer Ke :"
                     android:textSize="14sp"
                     android:gravity="start"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/colorPrimary"
                     />
 
             </LinearLayout>
@@ -157,6 +165,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                 android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 >
 
@@ -164,6 +173,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/logobni"
+                    android:layout_marginLeft="7dp"
                     android:layout_marginRight="5sp"
                     />
 
@@ -180,13 +190,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
                 >
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/Black"
+                    android:layout_marginLeft="9dp"
                     android:text="Jika transfer sudah dilakukan silahkan upload bukti resi pembayaran anda"
                     />
 
@@ -205,6 +216,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pilih"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#fff"
                     android:textAllCaps="false"
                     android:drawableLeft="@mipmap/ic_image"
                     />
@@ -224,12 +238,12 @@
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     app:bootstrapBrand="danger"
-                    android:textColor="@color/Black"
                     app:bootstrapSize="lg"
                     app:buttonMode="regular"
                     app:showOutline="false"
+                    android:fontFamily="sans-serif-medium"
                     app:roundedCorners="true"
-                    android:text="SELESAI PEMBAYARAN"
+                    android:text="KONFIRMASI PEMBAYARAN"
                     />
 
             </LinearLayout>

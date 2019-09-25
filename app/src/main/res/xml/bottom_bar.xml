@@ -2,17 +2,20 @@
 <Tabs>
     <tab
         id="@+id/tab_home"
-        icon="@drawable/ic_home"
+        icon="@drawable/ic_store_black_24dp"
         activeColor="@color/Black"
+        title="BERANDA"
         />
     <tab
         id="@+id/tab_keranjang"
-        icon="@drawable/ic_shopping_cart"
+        icon="@drawable/ic_shopping_cart_black_24dp"
         activeColor="@color/Black"
+        title="KERANJANG"
         />
     <tab
         id="@+id/tab_akun"
-        icon="@drawable/ic_account_circle"
+        icon="@drawable/ic_verified_user_white_24dp"
         activeColor="@color/Black"
+        title="RESELLER"
         />
 </Tabs>

@@ -112,13 +112,13 @@ public class KonfirmasiPesananAdapter extends RecyclerView.Adapter<KonfirmasiPes
                                         Toast.makeText(konteks, "Gagal", Toast.LENGTH_SHORT).show();
                                     }
                                 }else{
-                                    Toast.makeText(konteks, "fak euy unsuccesfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(konteks, "unsuccesfully", Toast.LENGTH_SHORT).show();
                                 }
                             }
 
                             @Override
                             public void onFailure(Call<ModelDetailPesanan> call, Throwable t) {
-                                Toast.makeText(konteks, "Yeaey failure "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(konteks, "Something Wrong "+t.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
 

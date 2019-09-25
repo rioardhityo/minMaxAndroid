@@ -21,7 +21,7 @@
                 android:id="@+id/toolbardaftar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/PinkTora"
+                android:background="@color/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </android.support.design.widget.AppBarLayout>
@@ -39,9 +39,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pendaftaran Reseller"
+                android:text="PENDAFTARAN RESELLER"
                 android:gravity="center"
-                android:textSize="32sp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"
                 android:textColor="@color/Black"
                 android:layout_marginBottom="10dp"
                 />
@@ -99,10 +100,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
                 android:text="@string/prosedurjadireseller"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
             <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:id="@+id/emailreseller"
@@ -135,6 +137,7 @@
                 app:roundedCorners="true"
                 app:bootstrapBrand="danger"
                 android:text="DAFTAR"
+                android:fontFamily="sans-serif-medium"
                 app:bootstrapSize="lg"
                 app:buttonMode="regular"
                 app:showOutline="false"
