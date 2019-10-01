@@ -1,6 +1,7 @@
 package edu.edo.torabentoapps.Controller;
 
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.res.FontResourcesParserCompat;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -171,7 +172,8 @@ public interface SampleAPI {
                                              @Field("status_transaksi") String status_transaksi,
                                              @Field("tanggal_transaksi") String tanggal_transaksi,
                                              @Field("resipembayaran") String resi_pembayaran,
-                                             @Field("nama_pembeli") String nama_pembeli
+                                             @Field("nama_pembeli") String nama_pembeli,
+                                             @Field("totalharga") int total_harga
                                              );
 
   @FormUrlEncoded

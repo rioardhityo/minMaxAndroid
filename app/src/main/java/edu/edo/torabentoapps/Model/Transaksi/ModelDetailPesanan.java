@@ -44,4 +44,9 @@ public class ModelDetailPesanan {
         this.dataArray1 = dataArray1;
     }
 
+    public ModelDetailPesanan(Integer nilai, String error, List<DataArray1> dataArray1) {
+        this.nilai = nilai;
+        this.error = error;
+        this.dataArray1 = dataArray1;
+    }
 }

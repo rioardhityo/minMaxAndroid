@@ -78,6 +78,7 @@ public class PembayaranLayout extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbardaftar);
         rvTransaksi = (RecyclerView)findViewById(R.id.rvuntuklistyangdibeli);
         totalharga = (TextView)findViewById(R.id.totalhargapembayaran);
+
         rvTransaksi.setHasFixedSize(true);
         rvL = new LinearLayoutManager(PembayaranLayout.this);
         rvTransaksi.setLayoutManager(rvL);
@@ -111,6 +112,7 @@ public class PembayaranLayout extends AppCompatActivity {
             total = total+num;
         }
         totalharga.setText("Rp. "+String.valueOf(total));
+
         String nama,nomorhp,email,alamat;
         nama = getIntent().getStringExtra("nama");
         nomorhp = getIntent().getStringExtra("nomorhp");
@@ -119,6 +121,7 @@ public class PembayaranLayout extends AppCompatActivity {
         editor.apply();
         email = getIntent().getStringExtra("email");
         alamat = getIntent().getStringExtra("alamat");
+
         Log.d("Nama", nama);
         Log.d("Nomor hp", nomorhp);
         Log.d("Email", email);
@@ -128,19 +131,19 @@ public class PembayaranLayout extends AppCompatActivity {
         rvTransaksi.setAdapter(adapter);
         setSupportActionBar(toolbar);
         toolbar.setSubtitle("Tahap pembayaran untuk menyelesaikan transaksi pembelian");
-        //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Pembayaran");
         Log.d("NAMA MAKANAN :",databaru.get(0).getNamaMakanan());
+
         bindDatanih();
+
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 imageBrowse();
-                //Beri validasi
-
             }
         });
+
         selesaiPembayaran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,8 +173,9 @@ public class PembayaranLayout extends AppCompatActivity {
                     Log.d("Nomor hp", nomorhp);
                     Log.d("Email", email);
                     Log.d("Alamat", alamat);
+
                     insertDataPembeli(nama,nomorhp,email,alamat);
-                    insertDataPembeli(nama,nomorhp,email,alamat);
+//                    insertDataPembeli(nama,nomorhp,email,alamat);
 
                     //Kebutuhan t_keranjang
                     Log.d("Nomor hp setelah insert", nomorhp);
@@ -181,8 +185,6 @@ public class PembayaranLayout extends AppCompatActivity {
                     }
 
                     masukkinTransaksi();
-
-
                     //Toast.makeText(PembayaranLayout.this, "Transaksi pembelian telah berhasil, silahkan tunggu konfirmasi dari reseller untuk pengiriman makanan.", Toast.LENGTH_LONG).show();
 
                 }
@@ -212,13 +214,11 @@ public class PembayaranLayout extends AppCompatActivity {
         Log.d("nama pembeli",nama );
         Log.d("status",status );
 
-        SampleAPI.Factory.getIstance(PembayaranLayout.this).insertManualTrans(id_reseller,id_pembeli,status,tanggal_transaksi,urlgambarresi,nama).enqueue(new Callback<ModelDetailPesanan>() {
+        SampleAPI.Factory.getIstance(PembayaranLayout.this).insertManualTrans(id_reseller,id_pembeli,status,tanggal_transaksi,urlgambarresi,nama,total).enqueue(new Callback<ModelDetailPesanan>() {
             @Override
             public void onResponse(Call<ModelDetailPesanan> call, Response<ModelDetailPesanan> response) {
                 if(response.isSuccessful()){
                     if(response.body().getNilai().equals(1)){
-
-                        //Toast.makeText(PembayaranLayout.this, "Alhamdulillah berhasil insert transaksinya", Toast.LENGTH_SHORT).show();
 
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(PembayaranLayout.this);
                         alertDialog.setTitle("PESAN")
@@ -234,9 +234,10 @@ public class PembayaranLayout extends AppCompatActivity {
                                 .show();
 
                     }else{
-                        Toast.makeText(PembayaranLayout.this, "Nilai 0", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PembayaranLayout.this, "Nilai 0 Data Tidak Masuk", Toast.LENGTH_SHORT).show();
                         Toast.makeText(PembayaranLayout.this, "Error : "+response.body().getError(), Toast.LENGTH_LONG).show();
                     }
+
                 }else{
                     Toast.makeText(PembayaranLayout.this, "Response is unsuccessfuly : "+response.errorBody(), Toast.LENGTH_SHORT).show();
                 }
@@ -248,33 +249,31 @@ public class PembayaranLayout extends AppCompatActivity {
             }
         });
 
-        /*
-        SampleAPI.Factory.getIstance(PembayaranLayout.this).insertTransaksi("INSERT INTO t_transaksi(id_reseller,id_pembeli,totalharga,status_transaksi,tanggal_transaksi,resipembayaran) VALUES("+id_reseller+","+id_pembeli+",(SELECT SUM(t_makanan.harga*t_keranjang.qty) FROM t_keranjang JOIN t_makanan ON t_keranjang.id_makanan = t_makanan.id_makanan JOIN t_pembeli ON t_keranjang.id_pembeli = t_pembeli.id_pembeli WHERE t_pembeli.nama_pembeli = '"+nama+"'),'Pending','"+tanggal_transaksi+"','"+urlgambarresi+"')")
-                .enqueue(new Callback<ModelDetailPesanan>() {
-                    @Override
-                    public void onResponse(Call<ModelDetailPesanan> call, Response<ModelDetailPesanan> response) {
-                        if(response.isSuccessful()){
-                            if(response.body().getNilai().equals(1)){
-                                //Pesan ini belakangan
 
-                            }else{
-                                Toast.makeText(PembayaranLayout.this, "Nilai 0", Toast.LENGTH_SHORT).show();
-                            }
-                        }else{
-                            Toast.makeText(PembayaranLayout.this, "Respon are unsuccessfully", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ModelDetailPesanan> call, @NonNull Throwable t) {
-                        Toast.makeText(PembayaranLayout.this, "ini bener rror : "+t.getMessage(), Toast.LENGTH_SHORT).show();
-                        t.printStackTrace();
-                    }
-                });
-        */
+//        SampleAPI.Factory.getIstance(PembayaranLayout.this).insertTransaksi("INSERT INTO t_transaksi(id_reseller,id_pembeli,totalharga,status_transaksi,tanggal_transaksi,resipembayaran) VALUES("+id_reseller+","+id_pembeli+",(SELECT SUM(t_makanan.harga*t_keranjang.qty) FROM t_keranjang JOIN t_makanan ON t_keranjang.id_makanan = t_makanan.id_makanan JOIN t_pembeli ON t_keranjang.id_pembeli = t_pembeli.id_pembeli WHERE t_pembeli.nama_pembeli = '"+nama+"'),'Pending','"+tanggal_transaksi+"','"+urlgambarresi+"')")
+//                .enqueue(new Callback<ModelDetailPesanan>() {
+//                    @Override
+//                    public void onResponse(Call<ModelDetailPesanan> call, Response<ModelDetailPesanan> response) {
+//                        if(response.isSuccessful()){
+//                            if(response.body().getNilai().equals(1)){
+//                                //Pesan ini belakangan
+//
+//                            }else{
+//                                Toast.makeText(PembayaranLayout.this, "Nilai 0", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }else{
+//                            Toast.makeText(PembayaranLayout.this, "Respon are unsuccessfully", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<ModelDetailPesanan> call, @NonNull Throwable t) {
+//                        Toast.makeText(PembayaranLayout.this, "ini bener rror : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+//                        t.printStackTrace();
+//                    }
+//                });
 
     }
-
 
 
     private void insertDataPembeli(String nama, String nomorhp, String email, String alamat) {
@@ -284,7 +283,7 @@ public class PembayaranLayout extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     //pd.dismiss();
                     if(response.body().getNilai().equals(1)){
-                        Toast.makeText(PembayaranLayout.this, "Berhasil tambah data pembeli", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PembayaranLayout.this, "Berhasil tambah data ke table pembeli", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(PembayaranLayout.this, "Ada yang salah!", Toast.LENGTH_SHORT).show();
                     }
@@ -452,7 +451,7 @@ public class PembayaranLayout extends AppCompatActivity {
             public void onResponse(Call<ModelKeranjangDB> call, Response<ModelKeranjangDB> response) {
                 if(response.isSuccessful()){
                     if(response.body().getNilai().equals(1)){
-                        Toast.makeText(PembayaranLayout.this, "Sukses T_keranjang !", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PembayaranLayout.this, "Sukses Dimasukkan ke Table keranjang !", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(PembayaranLayout.this, "It's return nilai 0 !", Toast.LENGTH_SHORT).show();
                         Toast.makeText(PembayaranLayout.this, response.message(), Toast.LENGTH_SHORT).show();

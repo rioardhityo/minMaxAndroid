@@ -16,6 +16,12 @@ public class DataArray1 {
     @Expose
     private String qty;
 
+    public DataArray1(String namaPembeli, String namaMakanan, String qty) {
+        this.namaPembeli = namaPembeli;
+        this.namaMakanan = namaMakanan;
+        this.qty = qty;
+    }
+
     public String getNamaPembeli() {
         return namaPembeli;
     }
